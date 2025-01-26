@@ -1,0 +1,16 @@
+{
+  "item.becuyeric.joinserver": "加入服务器",
+  "item.becuyeric.queue": "购买优先队列",
+  "item.becuyeric.miantain": "维护7天 服务器被攻击",
+  "item.becuyeric.miantain2": "维护30天 服务器被攻击",
+  "item.becuyeric.miantain3": "维护7天 服务器正常维护",
+  "item.becuyeric.miantain4": "维护30天 服务器正常维护",
+  "item.becuyeric.becuymoney_1": "一元by币",
+  "item.becuyeric.becuymoney_10": "10元by币",
+  "item.becuyeric.becuymoney_50": "50元by币",
+  "item.becuyeric.becuymoney_100": "100元by币",
+  "block.beccuyeric.spring_festival_activity": "舞台背景",
+  "itemgroup.becuyeric.becuyservermaintain": "服务器维护",
+  "itemgroup.becuyeric.becuyservereconitems": "服务器经济相关",
+  "itemgroup.beciuyeric.becuyserverlunar": "服务器除夕跨年"
+}
