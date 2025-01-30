@@ -1,25 +1,17 @@
 package com.eric;
 
-import com.ibm.icu.impl.UtilityExtensions;
-import com.llamalad7.mixinextras.sugar.impl.ref.LocalRefClassGenerator;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.TallBlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.collection.IndexedIterable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
-
-import java.sql.Blob;
-import java.sql.Ref;
 
 public class BECUYeric implements ModInitializer {
 	public static final String MOD_ID = "becuyeric";
@@ -43,9 +35,17 @@ public class BECUYeric implements ModInitializer {
 	public static final Item becuymoney_1 = new Item(new FabricItemSettings().maxCount(50));
 	public static final Item becuymoney_50 = new Item(new FabricItemSettings().maxCount(50));
 	public static final Item becuymoney_100 = new Item(new FabricItemSettings().maxCount(50));
+	public static final Item Presidents_office_Reception_Room = new Item(new FabricItemSettings().maxCount(1));
+	public static final Item gold = new Item(new FabricItemSettings().maxCount(64));
 	//除夕夜跨年
 	public static final Block spring_festival_activity = new Block(FabricBlockSettings.create().strength(80.0f,1400.0f).nonOpaque());
-	//
+	//方块相关
+	public  static final Block FunctionBlocks_GreenScreen= new Block(FabricBlockSettings.create().strength(80.0f,1400.0f).nonOpaque());
+	public static final Block  JoinGame = new Block(FabricBlockSettings.create().strength(80.0f, 1400.0f).nonOpaque());
+	public static final Block kick = new Block(FabricBlockSettings.create().strength(46.00f, 1400.0f).nonOpaque());
+	public static final Block gold_block = new Block(FabricBlockSettings.create().strength(2.0f, 1400.0f).nonOpaque().requiresTool());
+	//制裁周**
+	public static final Item vgu = new Item((new FabricItemSettings().maxCount(1)));
 	@Override
 	public void onInitialize() {
 		//物品服务器相关
@@ -64,10 +64,22 @@ public class BECUYeric implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_10"),becuymoney_10);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_1"),becuymoney_1);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_50"),becuymoney_50);
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beucymoney_100"),becuymoney_100);
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_100"),becuymoney_100);
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gold"),gold);
 		//spring festival
 		Registry.register(Registries.BLOCK,new Identifier(MOD_ID,"spring_festival_activity"),spring_festival_activity) ;
 		Registry.register(Registries.ITEM,new Identifier(MOD_ID,"spring_festival_activity"),new BlockItem(spring_festival_activity,new Item.Settings()));
-
+		//方块相关
+		Registry.register(Registries.BLOCK,new Identifier(MOD_ID, "functionblocks_greenscreen"),FunctionBlocks_GreenScreen);
+	        Registry.register(Registries.ITEM,new Identifier(MOD_ID, "functioblocks_greenscreen"),new BlockItem(FunctionBlocks_GreenScreen,new Item.Settings()));
+		Registry.register(Registries.BLOCK,new Identifier(MOD_ID, "joingame"),JoinGame);
+		    Registry.register(Registries.ITEM, new Identifier(MOD_ID, "joingame"),new BlockItem(JoinGame,new Item.Settings()));
+		Registry.register(Registries.BLOCK,new Identifier(MOD_ID, "kick"),kick);
+		    Registry.register(Registries.ITEM,new Identifier(MOD_ID, "kick"),new BlockItem(kick,new Item.Settings()));
+			Registry.register(Registries.BLOCK,new Identifier(MOD_ID, "gold_block"),gold_block);
+			Registry.register(Registries.ITEM,new Identifier(MOD_ID, "gold_block"),new BlockItem(gold_block,new Item.Settings()));
+			//制裁周**
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "vgu"),vgu);
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "presidents_office_reception_room"),Presidents_office_Reception_Room);
 	}
 }

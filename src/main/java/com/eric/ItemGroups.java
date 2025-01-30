@@ -41,9 +41,26 @@ public class ItemGroups implements ModInitializer {
                 entries.add(becuymoney_100);
             })
             .build();
+    public static final ItemGroup ZhiCai = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(vgu))
+            .displayName(Text.translatable("itemgroup.becuyeric.zhicai"))
+            .entries((Context, entries) -> {
+                entries.add(vgu);
+            })
+            .build();
+    public static final ItemGroup http = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(gold))
+            .displayName(Text.translatable("itemgroup.becuyeric.gold"))
+            .entries((Context, entries) -> {
+                entries.add(gold);
+                entries.add(gold_block);
+            })
+            .build();
     @Override
     public void onInitialize() {
         Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "becuyservermiantainitems"),BECUYservermaintain);
         Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "becuyservereconitems"),BecuyServerEconItems);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "zhicai"),ZhiCai);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "http"),http);
     }
 }
