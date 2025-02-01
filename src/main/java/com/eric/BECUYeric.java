@@ -13,6 +13,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.minecraft.item.Item;
 
+import com.eric.tools.weapon.Eric_052;
+import com.eric.tools.weapon.gold_weapon;
+
 public class BECUYeric implements ModInitializer {
 	public static final String MOD_ID = "becuyeric";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -44,8 +47,9 @@ public class BECUYeric implements ModInitializer {
 	public static final Block  JoinGame = new Block(FabricBlockSettings.create().strength(80.0f, 1400.0f).nonOpaque());
 	public static final Block kick = new Block(FabricBlockSettings.create().strength(46.00f, 1400.0f).nonOpaque());
 	public static final Block gold_block = new Block(FabricBlockSettings.create().strength(2.0f, 1400.0f).nonOpaque().requiresTool());
-	//制裁周**
-	public static final Item vgu = new Item((new FabricItemSettings().maxCount(1)));
+	//tools
+	public static final gold_weapon gold_weapon = new gold_weapon(new com.eric.tools.gold_weapon(),8,-0.8f,new Item.Settings());
+	public static final Eric_052 Eric_052 = new Eric_052(new com.eric.tools.Eric_052(),60,-0.8f,new Item.Settings());
 	@Override
 	public void onInitialize() {
 		//物品服务器相关
@@ -78,8 +82,9 @@ public class BECUYeric implements ModInitializer {
 		    Registry.register(Registries.ITEM,new Identifier(MOD_ID, "kick"),new BlockItem(kick,new Item.Settings()));
 			Registry.register(Registries.BLOCK,new Identifier(MOD_ID, "gold_block"),gold_block);
 			Registry.register(Registries.ITEM,new Identifier(MOD_ID, "gold_block"),new BlockItem(gold_block,new Item.Settings()));
-			//制裁周**
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "vgu"),vgu);
+		//tools
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gold_weapon"),gold_weapon);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "presidents_office_reception_room"),Presidents_office_Reception_Room);
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "eric_052"), Eric_052);
 	}
 }

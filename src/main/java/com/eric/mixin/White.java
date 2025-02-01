@@ -14,5 +14,4 @@ public class White {
     protected Text modifyDisconnectReason (Text originalReason) {
         return Text.literal("你没有去https://becuy.top/加入职业或者申请内测名额，无法加入服务器");
     }
-
 }

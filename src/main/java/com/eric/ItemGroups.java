@@ -8,7 +8,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.structure.Structure;
 
 import static com.eric.BECUYeric.*;
 
@@ -42,10 +41,10 @@ public class ItemGroups implements ModInitializer {
             })
             .build();
     public static final ItemGroup ZhiCai = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(vgu))
+            .icon(() -> new ItemStack(Eric_052))
             .displayName(Text.translatable("itemgroup.becuyeric.zhicai"))
             .entries((Context, entries) -> {
-                entries.add(vgu);
+                entries.add(Eric_052);
             })
             .build();
     public static final ItemGroup http = FabricItemGroup.builder()
@@ -54,6 +53,7 @@ public class ItemGroups implements ModInitializer {
             .entries((Context, entries) -> {
                 entries.add(gold);
                 entries.add(gold_block);
+                entries.add(gold_weapon);
             })
             .build();
     @Override

@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
 	"id": "becuyeric",
-	"version": "${version}",
+	"version": "1.0.2",
 	"name": "BECUYeric",
 	"description": "This is an anti-cheat mod",
 	"authors": [
-		"Me!"
+		"JangFuHeJi"
 	],
 	"contact": {
-		"homepage": "https://becuy.top/",
-		"sources": ""
+		"homepage": "1.1.1.1",
+		"sources": "https://modrinth.com/mod/geoke"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/becuyeric/icon.png",
@@ -18,7 +18,8 @@
 		"main": [
 			"com.eric.BECUYeric",
 			"com.eric.ItemGroups",
-			"com.eric.Logger"
+			"com.eric.Logger",
+			"com.eric.ServerLogger"
 
 		],
 		"client": [
