@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
 	"id": "becuyeric",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"name": "BECUYeric",
-	"description": "This is an anti-cheat mod",
+	"description": "This is a player MOD",
 	"authors": [
 		"JangFuHeJi"
 	],
 	"contact": {
-		"homepage": "1.1.1.1",
-		"sources": "https://modrinth.com/mod/geoke"
+		"homepage": "https://github.com/JangFuHeJi/BECUYericmod",
+		"sources": "https://github.com/JangFuHeJi/BECUYericmod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/becuyeric/icon.png",

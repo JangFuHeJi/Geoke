@@ -45,6 +45,13 @@ public class ItemGroups implements ModInitializer {
             .displayName(Text.translatable("itemgroup.becuyeric.zhicai"))
             .entries((Context, entries) -> {
                 entries.add(Eric_052);
+                entries.add(Ilikebvvd);
+                entries.add(wcn);
+                entries.add(dengji1);
+                entries.add(dengji2);
+                entries.add(dengji3);
+                entries.add(miaosha);
+                entries.add(miaoshamuch);
             })
             .build();
     public static final ItemGroup http = FabricItemGroup.builder()
@@ -53,7 +60,22 @@ public class ItemGroups implements ModInitializer {
             .entries((Context, entries) -> {
                 entries.add(gold);
                 entries.add(gold_block);
+                entries.add(gold_wblock);
                 entries.add(gold_weapon);
+            })
+            .build();
+    public static final ItemGroup Server = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(welcome))
+            .displayName(Text.translatable("itemgroup.becuyeric.server"))
+            .entries((Context, entries) -> entries.add(welcome))
+            .build();
+    public static final ItemGroup LeiYun = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(train_block))
+            .displayName(Text.translatable("itemgroup.becuyeric.leiyun"))
+            .entries((Context, entries) -> {
+                entries.add(train_block);
+                entries.add(door_not_in_use);
+                entries.add(jiaotongka);
             })
             .build();
     @Override
@@ -62,5 +84,7 @@ public class ItemGroups implements ModInitializer {
         Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "becuyservereconitems"),BecuyServerEconItems);
         Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "zhicai"),ZhiCai);
         Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "http"),http);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "server"),Server);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "leiyun"),LeiYun);
     }
 }

@@ -6,7 +6,7 @@ import net.minecraft.recipe.Ingredient;
 public class Eric_052 implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 35;
+        return 60;
     }
 
     @Override

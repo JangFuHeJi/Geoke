@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "becuyeric:gold_wblock"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "becuyeric:blocks/gold_wblock"
+}
