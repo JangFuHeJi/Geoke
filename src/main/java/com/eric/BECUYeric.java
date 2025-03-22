@@ -36,8 +36,6 @@ public class BECUYeric implements ModInitializer {
 	public static final Item becuymoney_50 = new Item(new FabricItemSettings().maxCount(50));
 	public static final Item becuymoney_100 = new Item(new FabricItemSettings().maxCount(50));
 	public static final Item gold = new Item(new FabricItemSettings().maxCount(64));
-	//除夕夜跨年
-	public static final Block spring_festival_activity = new Block(FabricBlockSettings.create().strength(80.0f,1400.0f).nonOpaque());
 	//方块相关
 	public static final Block FunctionBlocks_GreenScreen= new Block(FabricBlockSettings.create().strength(80.0f,1400.0f).nonOpaque());
 	public static final Block JoinGame = new Block(FabricBlockSettings.create().strength(80.0f, 1400.0f).nonOpaque());
@@ -55,10 +53,12 @@ public class BECUYeric implements ModInitializer {
 	public static final miaosha miaosha = new miaosha(new com.eric.tools.miaosha(),100,-0.8f,new Item.Settings());
 	public static final miaoshamuch miaoshamuch = new miaoshamuch(new com.eric.tools.miaoshamuch(),1000,1f,new Item.Settings());
 	public static final dengji3 dengji3 = new dengji3(new com.eric.tools.dengji3(),10000,1f,new Item.Settings());
+	public static final chx chx = new chx(new com.eric.tools.chx(), 10000,1f,new Item.Settings());
 	//交通
 	public static final Item jiaotongka = new Item(new FabricItemSettings().maxCount(1));
 	public static final Block train_block = new Block(FabricBlockSettings.create().strength(1400.0f,1000.0f).nonOpaque());
 	public static final Block door_not_in_use = new Block(FabricBlockSettings.create().strength(1400.0f,1000.0f).nonOpaque());
+	public static final Block rubbish = new Block(FabricBlockSettings.create().strength(1400.0f,1000.0f).nonOpaque());
 	@Override
 	public void onInitialize() {
 		//物品服务器相关
@@ -67,9 +67,6 @@ public class BECUYeric implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_50"), becuymoney_50);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_100"), becuymoney_100);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gold"), gold);
-		//spring festival
-		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "spring_festival_activity"), spring_festival_activity);
-		   Registry.register(Registries.ITEM, new Identifier(MOD_ID, "spring_festival_activity"), new BlockItem(spring_festival_activity, new Item.Settings()));
 		//方块相关
 		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "functionblocks_greenscreen"), FunctionBlocks_GreenScreen);
 		   Registry.register(Registries.ITEM, new Identifier(MOD_ID, "functioblocks_greenscreen"), new BlockItem(FunctionBlocks_GreenScreen, new Item.Settings()));
@@ -117,11 +114,15 @@ public class BECUYeric implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "miaosha"), miaosha);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "miaoshamuch"), miaoshamuch);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "dengji3"), dengji3);
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "chx"),chx);
 		//交通
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "jiaotongka"),jiaotongka);
 		Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "train_block"), train_block);
 		   Registry.register(Registries.ITEM, new Identifier(MOD_ID, "train_block"),new BlockItem(train_block, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "door_not_in_use"),door_not_in_use);
 		   Registry.register(Registries.ITEM, new Identifier(MOD_ID, "door_not_in_use"),new BlockItem(door_not_in_use, new Item.Settings()));
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "rubbish"),rubbish);
+		   Registry.register(Registries.ITEM, new Identifier(MOD_ID, "rubbish"),new BlockItem(rubbish, new Item.Settings()));
+
 	}
 }

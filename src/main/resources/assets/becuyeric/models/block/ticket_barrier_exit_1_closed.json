@@ -3,7 +3,7 @@
 	"textures": {
 		"color": "block/green_concrete",
 		"yellow_glass_off": "block/yellow_stained_glass",
-		"yellow_glass_on": "mtr:block/transparent",
+		"yellow_glass_on": "block/transparent",
 		"sign": "mtr:block/transparent"
 	}
 }

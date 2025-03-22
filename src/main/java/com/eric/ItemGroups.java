@@ -47,6 +47,7 @@ public class ItemGroups implements ModInitializer {
                 entries.add(Eric_052);
                 entries.add(Ilikebvvd);
                 entries.add(wcn);
+                entries.add(chx);
                 entries.add(dengji1);
                 entries.add(dengji2);
                 entries.add(dengji3);
@@ -76,6 +77,7 @@ public class ItemGroups implements ModInitializer {
                 entries.add(train_block);
                 entries.add(door_not_in_use);
                 entries.add(jiaotongka);
+                entries.add(rubbish);
             })
             .build();
     @Override

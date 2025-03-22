@@ -1,11 +1,11 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"particle": "mtr:block/metal",
-		"black": "mtr:block/black",
+		"particle": "block/metal",
+		"black": "block/black",
 		"yellow": "block/yellow_concrete",
-		"ticket": "mtr:block/ticket_processor",
-		"arrow": "mtr:block/sign/arrow_down_left"
+		"ticket": "block/ticket_processor",
+		"arrow": "block/sign/arrow_down_left"
 	},
 	"elements": [
 		{
