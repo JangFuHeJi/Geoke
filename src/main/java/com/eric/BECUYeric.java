@@ -1,12 +1,11 @@
 package com.eric;
 
-import com.eric.block.TurnstileBlock;
+import com.eric.block.Zj1;
 import com.eric.tools.weapon.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -61,11 +60,9 @@ public class BECUYeric implements ModInitializer {
 	public static final Block train_block = new Block(FabricBlockSettings.create().strength(1400.0f, 1000.0f).nonOpaque());
 	public static final Block door_not_in_use = new Block(FabricBlockSettings.create().strength(1400.0f, 1000.0f).nonOpaque());
 	public static final Block rubbish = new Block(FabricBlockSettings.create().strength(1400.0f, 1000.0f).nonOpaque());
-		public static final Block ZJ1 = new TurnstileBlock(
-				FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()
-		);
+	public static final Block Zj1 = new Zj1(FabricBlockSettings.create().strength(30.0f,200.0f).nonOpaque());
 
-		@Override
+    @Override
 		public void onInitialize() {
 			//物品服务器相关
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "becuymoney_10"), becuymoney_10);
@@ -129,7 +126,7 @@ public class BECUYeric implements ModInitializer {
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "door_not_in_use"), new BlockItem(door_not_in_use, new Item.Settings()));
 			Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "rubbish"), rubbish);
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "rubbish"), new BlockItem(rubbish, new Item.Settings()));
-			Registry.register(Registries.BLOCK, new Identifier("becuyeric", "zj1"), ZJ1);
-			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "zj1"), new BlockItem(ZJ1, new Item.Settings()));
+			Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "zj1"), Zj1);
+			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "zj1"), new BlockItem(Zj1, new Item.Settings().maxCount(1)));
 		}
 	}

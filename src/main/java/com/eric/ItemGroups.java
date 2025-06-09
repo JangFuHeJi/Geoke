@@ -78,7 +78,7 @@ public class ItemGroups implements ModInitializer {
                 entries.add(door_not_in_use);
                 entries.add(jiaotongka);
                 entries.add(rubbish);
-                entries.add(ZJ1);
+                entries.add(Zj1);
             })
             .build();
     @Override
